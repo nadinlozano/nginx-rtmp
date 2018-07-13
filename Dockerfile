@@ -27,7 +27,7 @@ RUN export buildDeps="autoconf \
         xz \
         git \
         pcre-dev \
-        zlib-dev" && \
+        zlib-dev aisa-utils alsa-tools libasound2" && \
     export MAKEFLAGS="-j$(($(grep -c ^processor /proc/cpuinfo) + 1))" && \
     apk add --update ${buildDeps} libgcc libstdc++ ca-certificates libssl1.0 && \
     DIR="$(mktemp -d)" && cd "${DIR}" && \
